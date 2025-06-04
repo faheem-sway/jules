@@ -22,5 +22,24 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif; /* Updated font-family */
+  background-color: #f4f4f4; /* Added */
+  color: #333; /* Added, might conflict or complement var(--foreground) */
+  line-height: 1.6; /* Added */
+  margin: 0; /* Added */
+  padding: 0; /* Added */
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
 }
