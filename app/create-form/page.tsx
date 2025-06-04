@@ -7,7 +7,7 @@ import { FormField, FormDefinition, FieldType } from '../lib/types'; // Adjust p
 import { addForm as saveNewFormToStorage } from '../lib/storage'; // Renamed import for clarity
 
 // Helper to generate a simple unique ID (for client-side temporary use)
-const generateId = () => Date.now().toString();
+const generateId = () => Date.now().toString() + Math.random().toString(36).substring(2, 9);
 
 export default function CreateFormPage() {
   // const router = useRouter(); // Will be used later
