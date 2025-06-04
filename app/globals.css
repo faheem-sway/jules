@@ -1,11 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  @apply bg-gray-50 text-gray-800 font-sans;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Ensure font variables from layout.tsx are referenced if needed by @theme, or define fallbacks */
+  /* --font-geist-sans: defined in layout.tsx; */
+  /* --font-geist-mono: defined in layout.tsx; */
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans); /* Assumes --font-geist-sans is globally available from layout.tsx's body className */
+  --font-mono: var(--font-geist-mono); /* Assumes --font-geist-mono is globally available */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/*
+  Any additional global styles or utilities like .text-balance can be added below,
+  but the primary Tailwind integration is now handled by @import "tailwindcss";
+  The previous @tailwind base/components/utilities directives are replaced.
+*/
 @layer utilities {
   .text-balance {
     text-wrap: balance;
