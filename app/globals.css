@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base body styles (background, text color, font) are now applied directly in app/layout.tsx */
+body {
+  @apply bg-gray-50 text-gray-800 font-sans;
+}
 
 @layer utilities {
   .text-balance {
